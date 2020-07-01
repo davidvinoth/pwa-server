@@ -56,60 +56,65 @@ app.post('/enroll', async function (req, res) {
       });
   }
 
-  // if (req.body) {
-  //   let data = req.body;
-  //   console.log(data);
+  if (req.body) {
+    let data = req.body;
+    console.log(data);
 
-  //   var con = await mysql.createConnection({
-  //     host: "localhost",
-  //     user: "root",
-  //     database: "pwa"
-  //   });
+    // var con = await mysql.createConnection({
+    //   host: "localhost",
+    //   user: "root",
+    //   database: "pwa"
+    // });
 
-  //   let symptoms = JSON.stringify(data.symptoms);
+    let symptoms = JSON.stringify(data.symptoms);
 
-  //   await new Promise(async (resolve, reject) => {
-  //     console.log("Promise");
-  //     await con.query(`INSERT INTO user_log(age, close_contact, gender, physical_condition, symptoms) VALUES (${data.age}, "${data.closeContact}", "${data.gender}", "${data.physicalCondition}", ${symptoms})`, function (err, rows) {
-  //       console.log("err",err)
-  //       if (err) throw reject(new Error("Error!"));
-  //       response.id = rows.insertId;
-  //       console.log("Insert");
-  //       console.log(rows);
-  //       resolve(response);
-  //     });
-  //   });
+    // await new Promise(async (resolve, reject) => {
+    //   console.log("Promise");
+    //   await con.query(`INSERT INTO user_log(age, close_contact, gender, physical_condition, symptoms) VALUES (${data.age}, "${data.closeContact}", "${data.gender}", "${data.physicalCondition}", ${symptoms})`, function (err, rows) {
+    //     console.log("err",err)
+    //     if (err) throw reject(new Error("Error!"));
+    //     response.id = rows.insertId;
+    //     console.log("Insert");
+    //     console.log(rows);
+    //     resolve(response);
+    //   });
+    // });
 
-  //   await new Promise(async (resolve, reject) => {
-  //     await con.query(`select * from user_log where id=${response.id}`, function (err, rows) {
-  //       if (err) throw reject(err);
+    // await new Promise(async (resolve, reject) => {
+    //   await con.query(`select * from user_log where id=${response.id}`, function (err, rows) {
+    //     if (err) throw reject(err);
 
-  //       if (rows && rows.length) {
-  //         result = rows[0];
-  //       }
-  //       result.possibility = response.possibility;
-  //       result.symptoms = decodeURIComponent(result.symptoms);
+    //     if (rows && rows.length) {
+    //       result = rows[0];
+    //     }
+    //     result.possibility = response.possibility;
+    //     result.symptoms = decodeURIComponent(result.symptoms);
 
-  //       console.log("select");
-  //       console.log(result);
-  //       resolve(result);
-  //     });
-  //   });
+    //     console.log("select");
+    //     console.log(result);
+    //     resolve(result);
+    //   });
+    // });
 
-  //   res.header("Content-Type", 'application/json');
-  //   console.log("return");
-  //   console.log(result);
+    result = data;
+    result.possibility = response.possibility;
+    result.close_contact = data.closeContact;
+    result.physical_condition = data.physicalCondition;
 
-  //   res.status(200).send({
-  //     success: true,
-  //     result: result
-  //   });
+    res.header("Content-Type", 'application/json');
+    console.log("return");
+    console.log(result);
 
-  // }
-
-      res.status(200).send({
-      success: true
+    res.status(200).send({
+      success: true,
+      result: result
     });
+
+  }
+
+    //   res.status(200).send({
+    //   success: true
+    // });
 })
 
 app.get('/state-wise-list', function (req, res) {
