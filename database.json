@@ -1,0 +1,72 @@
+[
+   {
+      "id": 1,
+      "state": "Maharashtra",
+      "total_cases": "67,655",
+      "active_cases": "36,040",
+      "recovered": "29329"
+    },
+    {
+      "id": 2,
+      "state": "Tamil Nadu",
+      "total_cases": "22,333",
+      "active_cases": "9,403",
+      "recovered": "12,757"
+    },
+    {
+      "id": 3,
+      "state": "Delhi",
+      "total_cases": "19,844",
+      "active_cases": "10,893",
+      "recovered": "8,478"
+    },
+    {
+      "id": 4,
+      "state": "Gujarat",
+      "total_cases": "16,779",
+      "active_cases": "5,822",
+      "recovered": "9,919"
+    },
+    {
+      "id": 5,
+      "state": "Rajasthan",
+      "total_cases": "8,831",
+      "active_cases": "2,710",
+      "recovered": "5,927"
+    },
+    {
+      "id": 6,
+      "state": "Madhya Pradesh",
+      "total_cases": "8,089",
+      "active_cases": "2,897",
+      "recovered": "4,842"
+    },
+    {
+      "id": 7,
+      "state": "Uttar Pradesh",
+      "total_cases": "7,823",
+      "active_cases": "2,901",
+      "recovered": "4,709"
+    },
+    {
+      "id": 8,
+      "state": "West Bengal",
+      "total_cases": "5,501",
+      "active_cases": "3,027",
+      "recovered": "2,157"
+    },
+    {
+      "id": 9,
+      "state": "Bihar",
+      "total_cases": "3,815",
+      "active_cases": "2,084",
+      "recovered": "1,710"
+    },
+    {
+      "id": 10,
+      "state": "Andhra Pradesh",
+      "total_cases": "3,679",
+      "active_cases": "1,268",
+      "recovered": "2,349"
+    }
+  ]
