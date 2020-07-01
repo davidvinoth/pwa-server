@@ -16,5 +16,9 @@
     "express": "^4.17.1",
     "firebase-admin": "^8.12.1",
     "mysql": "^2.18.1"
+  },
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.13.4"
   }
 }

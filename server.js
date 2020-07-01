@@ -118,6 +118,10 @@ app.get('/state-wise-list', function (req, res) {
   res.send(JSON.stringify(data));
 });
 
-app.listen(PORT, function () {
-  console.log("Server running on localhost:" + PORT);
+// app.listen(PORT, function () {
+//   console.log("Server running on localhost:" + PORT);
+// });
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Server started running");
 });
